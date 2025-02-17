@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
+
+@theme {
+  --color-text-secondary: #9A9A9A;
+  --color-dark: #202020;
+  --color-orange: #F5B366;
+}
