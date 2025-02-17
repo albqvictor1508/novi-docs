@@ -19,6 +19,25 @@ export default function Page() {
           </div>
           <span className="text-text-secondary text-[18px]">See why developers love Novi seta pra baixo</span>
         </section>
+
+        <section className="w-full h-full">
+          <span>Our Principle</span>
+          <h2>Design for humans</h2>
+
+          <p>
+            Our goal is to design an ergonomic, sensible, and productive framework that even beginners can use easily
+            Designed to avoid unnecessary complexity and type complexity for you to focus on building
+            A framework that feels <span>just like JavaScript</span>
+          </p>
+
+          <div id="cards" className="flex gap-8 items-center">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </section>
+
       </div>
     </>
   )
