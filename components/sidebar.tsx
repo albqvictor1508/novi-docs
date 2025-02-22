@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { useSidebar } from "~/lib/states/use-sidebar";
 import { cn } from "~/lib/utils/cn";
+import { AnimatePresence, motion } from "framer-motion"
 
 export const Sidebar = ({ onMobile }: { onMobile: boolean }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -34,9 +35,17 @@ export const Sidebar = ({ onMobile }: { onMobile: boolean }) => {
 
     <>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-[99] bg-black/50 lg:hidden" />
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[99] bg-black/50 lg:hidden"
+          />
+        )}
+      </AnimatePresence>
       <div className={cn("-translate-x-full lg:bg-transparent transition-all lg:translate-x-0 top-0 fixed z-[100] inset-0 lg:top-[65px] left-[max(0px,calc(50%-49rem))] right-auto w-full border-r lg:border-none max-w-[19rem] pb-10 overflow-y-auto", {
         "translate-x-0": isOpen,
         "lg:hidden": false,
