@@ -2,6 +2,8 @@ import { Links, LinksFunction, Meta, Outlet, Scripts, ScrollRestoration } from "
 
 import stylesheet from "./tailwind.css?url";
 
+import "swiper/css"
+
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ]
@@ -16,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-dark">
         {children}
         <ScrollRestoration />
         <Scripts />
