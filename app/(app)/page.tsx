@@ -1,35 +1,37 @@
-import noviLogo from "../assets/novi-logo.svg"
+import { Link } from "react-router";
+import { Button } from "~/components/ui/button";
+import { Spotlight } from "~/components/ui/spotlight";
 
 export default function Page() {
   return (
     <>
-      <div className="w-[1280px] mx-auto border">
-
-        <section className="flex flex-col space-y-8 items-center w-full h-full" id="hero">
-
-          <img src={noviLogo} alt="novi logo" className="border" />
-          <h1 className="text-5xl font-extrabold text-center bg-linear-to-b from-[#FFE387] to-[#F7B733] bg-clip-text text-transparent border">Ergonomic Framework for humans</h1>
-          <p className="text-center text-text-secondary text-2xl w-[600px]">
+      <div className="min-h-screen w-full rounded-md flex flex-col md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+        <Spotlight />
+        <section className="p-4 min-h-screen justify-center max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0 flex flex-col items-center gap-6">
+          <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+            Ergonomic Framework for humans
+          </h1>
+          <p className="text-center text-zinc-400 text-2xl w-[600px]">
             TypeScript with End-to-End Type Safety, type integrity, and exceptional developer experience. Supercharged by Bun.
           </p>
           <div className="w-max flex gap-4 items-center">
-            <button className="text-sm font-bold text-white px-4 py-2 rounded-[20px] bg-orange">Get Started</button>
-            <span className="text-sm font-bold text-white px-4 py-2 rounded-[20px] bg-[#F5B366]">bun add novi</span>
-            <button className="">botão de copiar</button>
+            <Button size="lg" className="bg-zinc-500/10 text-md rounded-xl hover:bg-zinc-500/5">
+              Getting Start
+            </Button>
+            <span className="text-sm border font-bold text-white px-4 py-2 rounded-md">
+              bun add novi
+            </span>
           </div>
-          <span className="text-text-secondary text-[18px]">See why developers love Novi seta pra baixo</span>
         </section>
 
         <section className="w-full h-full">
           <span>Our Principle</span>
           <h2>Design for humans</h2>
-
           <p>
             Our goal is to design an ergonomic, sensible, and productive framework that even beginners can use easily
             Designed to avoid unnecessary complexity and type complexity for you to focus on building
             A framework that feels <span>just like JavaScript</span>
           </p>
-
           <div id="cards" className="flex gap-8 items-center">
             <div></div>
             <div></div>
@@ -37,7 +39,6 @@ export default function Page() {
             <div></div>
           </div>
         </section>
-
       </div>
     </>
   )

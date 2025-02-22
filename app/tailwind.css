@@ -1,8 +1,45 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
-@theme {
-  --color-text-secondary: #9A9A9A;
-  --color-dark: #000000;
-  --color-orange: #F5B366;
+@layer base {
+  :root {
+      --radius: 0.5rem;
+  }
+  .dark {
+      --background: 24 14% 7%;
+      --background-2: 24 15% 10%;
+      --foreground: 24 20% 98%;
+      --popover: 24 15% 10%;
+      --popover-foreground: 24 20% 98%;
+      --secondary: 24 15% 10%;
+      --secondary-foreground: 24 39.3% 89%;
+      --primary: 24 90% 66%;
+      --primary-foreground: 24 20% 98%;
+      --muted: 24 3% 10%;
+      --muted-foreground: 24 6% 55%;
+      --accent: 24 89% 66%;
+      --accent-foreground: 24 20% 98%;
+      --destructive: 0 84% 60%;
+      --destructive-foreground: 24 20% 98%;
+      --border: 24 16% 16%;
+      --input: 24 16% 16;
+      --ring: 24 89% 66%;
+      --chart-1: 24 70% 50%;
+      --chart-2: 24 60% 45%;
+      --chart-3: 24 80% 55%;
+      --chart-4: 24 65% 60%;
+      --chart-5: 24 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+      @apply border-border ease-in-out;
+  }
+  body {
+      @apply bg-background text-foreground max-w-screen overflow-x-hidden;
+  }
+  button {
+      @apply cursor-pointer
+  }
 }

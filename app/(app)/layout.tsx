@@ -4,8 +4,7 @@ import Navbar from "~/components/navbar";
 export default function RootLayout() {
   return (
     <>
-      <main className="relative z-[1] bg-primary border border-transparent data-[aria-hidden=true]:border-border transition-colors duration-200 ease-in-out">
-        <Navbar />
+      <main className="w-full overflow-x-hidden xl:!overflow-visible">
         <Outlet />
       </main>
     </>
